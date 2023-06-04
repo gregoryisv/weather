@@ -33,7 +33,7 @@ function Inputs({setQuery, units, setUnits}) {
 
   return (
     <div className="flex flex-row justify-center my-6">
-      <div className=" flex flex-row w-3/4 items-center justify-center space-x-4">
+      <div className=" flex flex-row w-3/4 items-center justify-start space-x-4">
         
         <input
         id="search"
@@ -42,7 +42,7 @@ function Inputs({setQuery, units, setUnits}) {
         onKeyDown={handleKeyDown}
         type="text"
         placeholder='Поиск...'
-        className="rounded-md text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize"
+        className="ml-4 rounded-md text-xl font-light p-2 w-full shadow-xl focus:outline-none capitalize"
         />
         
         <UilTelescope
@@ -58,7 +58,7 @@ function Inputs({setQuery, units, setUnits}) {
         /> 
       </div>
 
-      <div className='flex flex-row w-1/4 items-center justify-center'>
+      <div className=' flex flex-row w-1/4 items-center justify-end mr-4'>
             <button
                 name="metric"
                 className='text-xl text-white font-light transition ease-out hover:scale-110'
