@@ -46,7 +46,7 @@ const getWeatherData = (infoType, searchParams) => {
   
   const formatForecastWeather = (data) => {
     let { timezone, daily, hourly } = data;
-    daily = daily.slice(1, 6).map((d) => {
+    daily = daily.slice(0, 7).map((d) => {
       return {
         title: formatToLocalTime(d.dt, timezone, "ccc"),
         temp: d.temp.day,
@@ -54,7 +54,7 @@ const getWeatherData = (infoType, searchParams) => {
       };
     });
   
-    hourly = hourly.slice(1, 6).map((d) => {
+    hourly = hourly.slice(1, 13).map((d) => {
       return {
         title: formatToLocalTime(d.dt, timezone, "HH:mm"),
         temp: d.temp,
