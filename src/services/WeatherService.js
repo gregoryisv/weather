@@ -54,7 +54,7 @@ const getWeatherData = (infoType, searchParams) => {
       };
     });
   
-    hourly = hourly.slice(1, 13).map((d) => {
+    hourly = hourly.slice(1, 10).map((d) => {
       return {
         title: formatToLocalTime(d.dt, timezone, "HH:mm"),
         temp: d.temp,
