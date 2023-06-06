@@ -35,7 +35,7 @@ function App() {
 
   return (
     <div
-    className={`rounded-xl mx-auto max-w-screen-md my-3 py-5 px-32 h-fit
+    className={`rounded-xl mx-auto max-w-screen-md my-3 py-5 sm:px-10 lg:px-32 h-fit
     shadow-xl shadow-gray-400 ${formatBackground()}`}
     >
       <div
