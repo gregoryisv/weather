@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react';
-import './App.css';
 import TopButtons from './components/TopButtons';
 import Inputs from './components/Inputs';
 import TimeAndLoc from './components/TimeAndLoc';
@@ -23,32 +22,25 @@ function App() {
     fetchWeather();
   }, [query, units]);
 
-  /*
+  
   const formatBackground = () => {
-    if (!weather) return 'from-gray-600 to-black'
-    
-    const hot = units === 'metric' ? 25 : 60;
-    const warm = units === 'metric' ? 10 : 25;
-    const cold = units === 'metric' ? -100 : 10;
-    if (weather.temp < warm) return 'from-cyan-700 to-blue-700'
-    //console.log(hot,warm,cold)
-    if (weather.temp >= cold && weather.temp <= hot) return 'from-green-600 to-blue-800'
-    
-    if (weather.temp > warm) return 'from-orange-500 to-red-700'
-  }*/
+    if (!weather){
+      return 'bg-gradient-to-br from-gray-400 to-gray-gray-300'
+    } else {
+      return 'bg-cover bg-center bg-no-repeat bg-[url("https://loremflickr.com/800/1000/forest")]'
+    }
+  }
 
   document.title = "Погода";
 
   return (
-    /*<div
-    className={`rounded-xl mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br h-fit
-    shadow-xl shadow-gray-400 ${formatBackground()}`}>*/
     <div
-    className={`rounded-xl  mx-auto max-w-screen-md mt-4 py-5 px-32 h-fit shadow-xl shadow-gray-400
-    bg-cover bg-no-repeat bg-center bg-[url("https://loremflickr.com/800/1000/landscape")]`}
+    className={`rounded-xl mx-auto max-w-screen-md my-3 py-5 px-32 h-fit
+    shadow-xl shadow-gray-400 ${formatBackground()}`}
     >
       <div
-        className='backdrop-filter backdrop-blur-lg backdrop-brightness-80 p-3 rounded-xl'
+        className='backdrop-blur backdrop-brightness-90
+        p-3 rounded-xl shadow-inner shadow-grey-400'
       >
         <TopButtons setQuery={setQuery}/>
         <Inputs setQuery={setQuery} units={units} setUnits={setUnits}/>

@@ -3,7 +3,7 @@ import { iconUrlFromCode} from '../services/WeatherService'
 
 function Forecast({title, items}) {
   return (
-    <div>
+    <div className='mx-4'>
         <div className='flex items-center justify-start mt-6 '>
             <p className='text-white font-medium uppercase'>{title}</p>
         </div>
@@ -11,7 +11,8 @@ function Forecast({title, items}) {
 
         <div className='flex flex-row items-center justify-between text-white mb-6'>
             {items.map(item =>(
-                <div className='flex flex-col items-center justify-center'>
+                <div className='flex flex-col items-center justify-center
+                transition ease-out hover:scale-105 cursor-pointer'>
                     <p className='font-light text-sm'>
                         {item.title}
                     </p>
